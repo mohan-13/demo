@@ -1,0 +1,10 @@
+name: Validate PR
+on:
+  workflow_dispatch:
+jobs:
+  demo:
+    name: Demo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "hiiiiiii"
