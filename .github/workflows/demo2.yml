@@ -3,8 +3,13 @@ on:
   repository_dispatch:
 jobs:
   demo:
+    strategy: 
+      matrix:
+        repositories: ["openerp-atomfeed-service","odoo-modules","OpenELIS"]
     name: Demo
     runs-on: ubuntu-latest
     steps:
       - name: Print Message
-        run: echo "hiiiiiii"
+        env:
+          REPOSITORY_NAME: ${{ martix.repositories }}
+        run: echo "hiiiiiii- ${REPOSITORY_NAME}"
