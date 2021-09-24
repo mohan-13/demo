@@ -3,11 +3,11 @@ on:
   repository_dispatch:
 jobs:
   demo:
+    name: Demo
+    runs-on: ubuntu-latest
     strategy: 
       matrix:
         repositories: ["openerp-atomfeed-service","odoo-modules","OpenELIS"]
-    name: Demo
-    runs-on: ubuntu-latest
     steps:
       - name: Print Message
         env:
