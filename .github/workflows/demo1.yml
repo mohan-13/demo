@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Print Message
         env:
-          USERNAME: ${{ secrets.demo }}
+          USERNAME: ${{ secrets.DEMO_SECRET }}
         run: echo "hiiiiiii ${USERNAME}"
       - name: Trigger Demo 2
         run : |
