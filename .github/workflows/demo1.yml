@@ -1,4 +1,4 @@
-name: Validate PR
+name: Demo Flow
 on:
   workflow_dispatch:
 jobs:
