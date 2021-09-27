@@ -22,7 +22,7 @@ jobs:
               mkdir /tmp/ant
               tar -zxf apache-ant-1.9.16-bin.tar.gz --directory /tmp/ant
               ls /tmp/ant
-              export ANT_HOME=/tmp/ant
+              export ANT_HOME=/tmp/ant/apache-ant-1.9.16
               export PATH=$PATH:$ANT_HOME/bin
               which ant
               ant -version
