@@ -22,4 +22,5 @@ jobs:
               mkdir /tmp/ant
               tar -zxf apache-ant-1.9.16-bin.tar.gz --directory /tmp/ant
               export ANT_HOME=/tmp/ant
-              ant -version
+              which ant
+              sudo ant -version
