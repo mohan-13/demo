@@ -17,8 +17,9 @@ jobs:
           java-version: '7'
       - name: Trigger Demo 2
         run : |
+              java -version
               wget https://dlcdn.apache.org//ant/binaries/apache-ant-1.9.16-bin.tar.gz
               mkdir /tmp/ant
               tar -zxf apache-ant-1.9.16-bin.tar.gz --directory /tmp/ant
-              export ANT_HOME=/tmp/ant/bin
+              export ANT_HOME=/tmp/ant
               ant -version
