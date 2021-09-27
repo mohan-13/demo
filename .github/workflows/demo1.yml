@@ -16,4 +16,8 @@ jobs:
           distribution: 'zulu'
           java-version: '7'
       - name: Trigger Demo 2
-        run : sudo apt-get install ant@1.9
+        run : |
+              wget https://dlcdn.apache.org//ant/binaries/apache-ant-1.9.16-bin.tar.gz
+              tar -zxf apache-ant-1.9.16-bin.tar.gzr --directory /usr/local/ant
+              export ANT_HOME=/usr/local/ant/bin
+              ant -version
