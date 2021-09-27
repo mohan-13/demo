@@ -18,6 +18,7 @@ jobs:
       - name: Trigger Demo 2
         run : |
               wget https://dlcdn.apache.org//ant/binaries/apache-ant-1.9.16-bin.tar.gz
-              tar -zxf apache-ant-1.9.16-bin.tar.gz --directory /usr/local/ant
+              mkdir /tmp/ant
+              tar -zxf apache-ant-1.9.16-bin.tar.gz --directory /tmp/ant
               export ANT_HOME=/usr/local/ant/bin
               ant -version
