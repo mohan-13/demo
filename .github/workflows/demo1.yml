@@ -16,4 +16,4 @@ jobs:
           distribution: 'zulu'
           java-version: '7'
       - name: Trigger Demo 2
-        run : apt-get install ant@1.9
+        run : sudo apt-get install ant@1.9
