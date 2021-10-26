@@ -1,15 +1,11 @@
 name: Demo 2
 on:
-  repository_dispatch:
+  issues:
+    types: [closed]
 jobs:
   demo:
     name: Demo
     runs-on: ubuntu-latest
-    strategy: 
-      matrix:
-        repositories: ["openerp-atomfeed-service","odoo-modules","OpenELIS"]
     steps:
       - name: Print Message
-        env:
-          REPOSITORY_NAME: ${{ matrix.repositories }}
-        run: echo "hiiiiiii- ${REPOSITORY_NAME}"
+        run: echo "hiiiiiii- ${{ github.event.issue }}"
