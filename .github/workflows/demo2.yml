@@ -2,6 +2,7 @@ name: Demo 2
 on:
   issues:
     types: [closed]
+  workflow_dispatch:
 jobs:
   demo:
     name: Demo
@@ -9,3 +10,11 @@ jobs:
     steps:
       - name: Print Message
         run: echo "hiiiiiii- ${{ github.event.issue.assignees }}"
+      - name: Git commit
+        run: |
+          touch sample
+          git add .
+          git commit -m "Sample Commit from GH Actions"
+      - name: Git Push
+        run: |
+          git push
