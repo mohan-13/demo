@@ -8,13 +8,11 @@ jobs:
     name: Demo
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
-        run: echo "hiiiiiii- ${{ github.event.issue.assignees }}"
-      - name: Git commit
-        run: |
-          touch sample
+      - uses: actions/checkout@v2
+      - run: |
+          date > generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
-          git commit -m "Sample Commit from GH Actions"
-      - name: Git Push
-        run: |
+          git commit -m "generated"
           git push
